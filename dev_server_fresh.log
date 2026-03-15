@@ -1,0 +1,31 @@
+
+> pitchforge-app@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+ ⚠ Port 3001 is in use, trying 3002 instead.
+ ⚠ Port 3002 is in use, trying 3003 instead.
+ ⚠ Port 3003 is in use, trying 3004 instead.
+ ⚠ Port 3004 is in use, trying 3005 instead.
+ ⚠ Port 3005 is in use, trying 3006 instead.
+ ⚠ Port 3006 is in use, trying 3007 instead.
+  ▲ Next.js 14.2.16
+  - Local:        http://localhost:3007
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.7s
+ ✓ Compiled /api/pitch in 454ms (58 modules)
+ POST /api/pitch 200 in 571ms
+ ○ Compiling /api/pitch/[id]/stream ...
+ ✓ Compiled /api/pitch/[id]/stream in 1082ms (218 modules)
+Failed to set fetch cache https://us-central1-aiplatform.googleapis.com/v1beta1/projects/indiepitch-studio/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent Error: Failed to set Next.js data cache, items over 2MB can not be cached (2629082 bytes)
+    at IncrementalCache.set (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\lib\incremental-cache\index.js:388:23)
+    at C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\compiled\next-server\app-route.runtime.dev.js:6:53390
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Models.generateContent (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:13946:24)
+    at async generateImageWithModel (webpack-internal:///(rsc)/./src/lib/server/pitch-generation.ts:178:22)
+    at async Promise.all (index 1)
+    at async generatePitchBlocks (webpack-internal:///(rsc)/./src/lib/server/pitch-generation.ts:203:39)
+    at async Object.start (webpack-internal:///(rsc)/./src/app/api/pitch/[id]/stream/route.ts:45:32)
+ GET /api/pitch/59fe1656-2c80-414f-8d88-a02b15f55778/stream 200 in 28001ms

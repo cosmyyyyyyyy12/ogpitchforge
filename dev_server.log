@@ -1,0 +1,167 @@
+
+> pitchforge-app@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+ ⚠ Port 3001 is in use, trying 3002 instead.
+ ⚠ Port 3002 is in use, trying 3003 instead.
+ ⚠ Port 3003 is in use, trying 3004 instead.
+ ⚠ Port 3004 is in use, trying 3005 instead.
+ ⚠ Port 3005 is in use, trying 3006 instead.
+  ▲ Next.js 14.2.16
+  - Local:        http://localhost:3006
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.3s
+ ✓ Compiled /api/pitch in 496ms (58 modules)
+ POST /api/pitch 200 in 625ms
+ ○ Compiling /api/pitch/[id]/stream ...
+ ✓ Compiled /api/pitch/[id]/stream in 910ms (218 modules)
+ GET /api/pitch/ec33ac30-d905-486e-a9ca-bcd289b4e8c2/stream 200 in 2256ms
+ ✓ Compiled in 44ms
+   Reload env: .env.local
+ ✓ Compiled in 2.2s (202 modules)
+ ✓ Compiled /api/pitch in 76ms (58 modules)
+ POST /api/pitch 200 in 143ms
+ ✓ Compiled /api/pitch/[id]/stream in 97ms (218 modules)
+Gemini text generation failed, using fallback narrative. Error: The file at C:\path\to\your\service-account.json does not exist, or it is not a file. ENOENT: no such file or directory, lstat 'C:\path'
+    at Object.realpathSync (node:fs:2775:29)
+    at GoogleAuth._getApplicationCredentialsFromFilePath (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:380:27)
+    at GoogleAuth._tryGetApplicationCredentialsFromEnvironmentVariable (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:321:25)
+    at GoogleAuth.getApplicationDefaultAsync (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:257:24)
+    at #determineClient (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:764:47)
+    at GoogleAuth.getClient (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:739:61)
+    at GoogleAuth.getRequestHeaders (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:793:35)
+    at NodeAuth.addGoogleAuthHeaders (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:18695:51)
+    at NodeAuth.addAuthHeaders (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:18675:21)
+    at ApiClient.getHeadersInternal (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:12702:39)
+    at ApiClient.includeExtraHttpOptionsToRequestInit (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:12539:42)
+    at ApiClient.request (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:12478:34)
+    at Models.generateContentInternal (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:14423:18)
+    at Models.generateContent (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:13946:35)
+    at async generateTextWithModel (webpack-internal:///(rsc)/./src/lib/server/pitch-generation.ts:114:22)
+    at async Promise.all (index 0)
+    at async generatePitchBlocks (webpack-internal:///(rsc)/./src/lib/server/pitch-generation.ts:172:39)
+    at async Object.start (webpack-internal:///(rsc)/./src/app/api/pitch/[id]/stream/route.ts:45:32) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'C:\\path'
+}
+Gemini image generation failed, using fallback image. Error: The file at C:\path\to\your\service-account.json does not exist, or it is not a file. ENOENT: no such file or directory, lstat 'C:\path'
+    at Object.realpathSync (node:fs:2775:29)
+    at GoogleAuth._getApplicationCredentialsFromFilePath (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:380:27)
+    at GoogleAuth._tryGetApplicationCredentialsFromEnvironmentVariable (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:321:25)
+    at GoogleAuth.getApplicationDefaultAsync (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:257:24)
+    at #determineClient (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:764:47)
+    at GoogleAuth.getClient (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:739:61)
+    at GoogleAuth.getRequestHeaders (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:793:35)
+    at NodeAuth.addGoogleAuthHeaders (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:18695:51)
+    at NodeAuth.addAuthHeaders (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:18675:21)
+    at ApiClient.getHeadersInternal (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:12702:39)
+    at ApiClient.includeExtraHttpOptionsToRequestInit (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:12539:42)
+    at ApiClient.request (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:12478:34)
+    at Models.generateContentInternal (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:14423:18)
+    at Models.generateContent (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:13946:35)
+    at async generateImageWithModel (webpack-internal:///(rsc)/./src/lib/server/pitch-generation.ts:147:22)
+    at async Promise.all (index 1)
+    at async generatePitchBlocks (webpack-internal:///(rsc)/./src/lib/server/pitch-generation.ts:172:39)
+    at async Object.start (webpack-internal:///(rsc)/./src/app/api/pitch/[id]/stream/route.ts:45:32) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'C:\\path'
+}
+Gemini table generation failed, using fallback table. Error: The file at C:\path\to\your\service-account.json does not exist, or it is not a file. ENOENT: no such file or directory, lstat 'C:\path'
+    at Object.realpathSync (node:fs:2775:29)
+    at GoogleAuth._getApplicationCredentialsFromFilePath (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:380:27)
+    at GoogleAuth._tryGetApplicationCredentialsFromEnvironmentVariable (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:321:25)
+    at GoogleAuth.getApplicationDefaultAsync (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:257:24)
+    at #determineClient (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:764:47)
+    at GoogleAuth.getClient (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:739:61)
+    at GoogleAuth.getRequestHeaders (webpack-internal:///(rsc)/./node_modules/google-auth-library/build/src/auth/googleauth.js:793:35)
+    at NodeAuth.addGoogleAuthHeaders (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:18695:51)
+    at NodeAuth.addAuthHeaders (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:18675:21)
+    at ApiClient.getHeadersInternal (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:12702:39)
+    at ApiClient.includeExtraHttpOptionsToRequestInit (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:12539:42)
+    at ApiClient.request (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:12478:34)
+    at Models.generateContentInternal (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:14423:18)
+    at Models.generateContent (webpack-internal:///(rsc)/./node_modules/@google/genai/dist/node/index.mjs:13946:35)
+    at async generateTableWithModel (webpack-internal:///(rsc)/./src/lib/server/pitch-generation.ts:129:22)
+    at async Promise.all (index 2)
+    at async generatePitchBlocks (webpack-internal:///(rsc)/./src/lib/server/pitch-generation.ts:172:39)
+    at async Object.start (webpack-internal:///(rsc)/./src/app/api/pitch/[id]/stream/route.ts:45:32) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'lstat',
+  path: 'C:\\path'
+}
+ ⨯ Failed to generate static paths for /api/pitch/[id]/stream:
+TypeError: Cannot read properties of undefined (reading 'call')
+    at __webpack_require__ (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute&page=%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute.ts&appDir=C%3A%5CUsers%5Ctanis%5CDownloads%5CPitchForge-main%5CPitchForge-main%5Csrc%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5Ctanis%5CDownloads%5CPitchForge-main%5CPitchForge-main&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!:10:121)
+    at (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute&page=%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute.ts&appDir=C%3A%5CUsers%5Ctanis%5CDownloads%5CPitchForge-main%5CPitchForge-main%5Csrc%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5Ctanis%5CDownloads%5CPitchForge-main%5CPitchForge-main&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:438:1)
+    at __webpack_require__ (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\webpack-runtime.js:33:43)
+    at __webpack_exec__ (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:481:39)
+    at C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:482:550
+    at __webpack_require__.X (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\webpack-runtime.js:151:21)
+    at C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:482:47
+    at Object.<anonymous> (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:485:3)
+    at Module._compile (node:internal/modules/cjs/loader:1812:14) {
+  type: 'TypeError'
+}
+ GET /api/pitch/2908a619-7f48-4779-949f-29eac6053303/stream 200 in 997ms
+ ✓ Compiled in 115ms (218 modules)
+ POST /api/pitch 200 in 28ms
+ ⨯ TypeError: Cannot read properties of undefined (reading 'call')
+    at __webpack_require__ (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\webpack-runtime.js:33:43)
+    at eval (webpack-internal:///(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute&page=%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute.ts&appDir=C%3A%5CUsers%5Ctanis%5CDownloads%5CPitchForge-main%5CPitchForge-main%5Csrc%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5Ctanis%5CDownloads%5CPitchForge-main%5CPitchForge-main&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!:10:121)
+    at (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader.js?name=app%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute&page=%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fpitch%2F%5Bid%5D%2Fstream%2Froute.ts&appDir=C%3A%5CUsers%5Ctanis%5CDownloads%5CPitchForge-main%5CPitchForge-main%5Csrc%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5Ctanis%5CDownloads%5CPitchForge-main%5CPitchForge-main&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D! (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:438:1)
+    at __webpack_require__ (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\webpack-runtime.js:33:43)
+    at __webpack_exec__ (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:481:39)
+    at C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:482:550
+    at __webpack_require__.X (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\webpack-runtime.js:151:21)
+    at C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:482:47
+    at Object.<anonymous> (C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\app\api\pitch\[id]\stream\route.js:485:3)
+    at Module._compile (node:internal/modules/cjs/loader:1812:14) {
+  type: 'TypeError',
+  page: '/api/pitch/9b8c1e28-f098-4176-886f-4d07293214ad/stream'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1510ms (646 modules)
+ GET /api/pitch/9b8c1e28-f098-4176-886f-4d07293214ad/stream 500 in 2232ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\pages'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/pages/_error' in C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\pages\_error.js', but to 'Error: Can't resolve '../../../../.next/server/pages/_error' in 'C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/pages/_error (expected C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\pages\_error.js)
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/pages/_app' in C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\pages\_app.js', but to 'Error: Can't resolve '../../../../.next/server/pages/_app' in 'C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/pages/_app (expected C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\pages\_app.js)
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/pages/_document' in C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\pages\_document.js', but to 'Error: Can't resolve '../../../../.next/server/pages/_document' in 'C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/pages/_document (expected C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\.next\server\pages\_document.js)
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\tanis\Downloads\PitchForge-main\PitchForge-main\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js

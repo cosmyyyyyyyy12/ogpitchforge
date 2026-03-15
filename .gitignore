@@ -1,0 +1,27 @@
+# environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# node
+node_modules/
+
+# nextjs
+.next/
+out/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+dev_server*.log
+
+# local generated data
+data/pitches.json
+
+# service accounts / local keys
+*.json
+!package*.json
+
+# OS
+.DS_Store
